@@ -1,0 +1,24 @@
+body{
+    justify-content: center;
+    background-color: rgb(25, 37, 78);
+    font-family:monospace;
+    color: royalblue;
+    text-align: center;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+}
+p{
+    margin-top:0 ;
+    color:steelblue
+}
+legend{
+    font-size: 1.6em;
+}
+fieldset{
+    padding: 10px; margin-top: 50px;
+    border-radius:20px;
+    
+}
