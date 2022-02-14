@@ -31,8 +31,3 @@ span{
 #mail{
         padding: 0px !important;
 }
-@media screen and (max-width: 465px){
-        body{
-                width: 80vw;
-        }
-}
