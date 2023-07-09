@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>erizo.cc</title>
-</head>
-<body>
-        <div>
-                <h1>People say that the end marks a new beginning...well lets find out.<br></h1>   
-                <p><b><i>Coming Soon...</i></b></p>
-        </div>
-</body>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="res/Niko2.gif" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=0.9, minimum-scale=0.9, user-scalable=no"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sono:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Erizo.cc</title>
+	</head>
+	<body>
+		<!-- I WILL use this canvas, i even have a cool idea but im too lazy to do it now.
+			<canvas id="canvas"></canvas>-->
+		<div id="content">
+			<div id="buttons">
+				<a href="under-construction.html" class="button">About Me</a>
+				<a href="under-construction.html" class="button">Music</a>
+				<a href="under-construction.html" class="button">Weeb Stuff</a>
+				<a href="under-construction.html" class="button">Coding Stuff</a>
+				<a href="under-construction.html" class="button">Blog</a>
+				<a href="under-construction.html" class="button">Linux Rice</a>
+				<a href="under-construction.html" class="button">Future</a>
+			</div>
+
+			<div id="card">
+				<div id="main">
+					<img id="photo" src="res/Niko2.gif" />
+					<p id="socials">
+						Discord: @erizo__ <br />
+						<a href="https://twitter.com/@Erizo13_"> Twitter: Erizo13_ </a>
+						<br />
+						E-mail: erizo_dev@pm.me <br />
+						<a href="https://github.com/drerizo"> Github: DrErizo </a>
+					</p>
+				</div>
+			</div>
+			<p>Visit a randomly chosen friendly site:</p>
+			<a id="friendly-site" href="mystery">
+				<img src="res/button.png" id="red-btn" />
+			</a>
+		</div>
+		<script>
+			let nikos = ['Niko.jpg', 'Niko2.gif']
+			let img = document.getElementById('photo')
+			let rnd = (Math.random() * nikos.length) << 0
+			img.src = 'res/' + nikos[rnd]
+			console.log('niko: ' + nikos[rnd])
+
+			let sites = [
+				'maciejniziolek.xyz',
+				'blackshibe.github.io',
+				'michishoe.neocities.org',
+			]
+			let redbtn = document.getElementById('friendly-site')
+			redbtn.addEventListener('mousedown', function () {
+				rnd = (Math.random() * sites.length) << 0
+				redbtn.href = 'http://' + sites[rnd]
+			})
+			redbtn.addEventListener('mouseout', function () {
+				redbtn.href = 'mystery'
+			})
+		</script>
+	</body>
 </html>
