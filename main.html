@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="./res/Niko2.webp" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=0.9, minimum-scale=0.9, user-scalable=no"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sono:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Erizo.cc</title>
+	</head>
+	<style>
+		body{
+			justify-content:center;
+			align-items:center;
+			flex-direction: column;
+		}
+		body{
+			display: flex;
+			font-family:monospace;
+		}
+		#face{
+			margin:0;
+			width: 300px;
+			margin-top:100px;
+			height:300px;
+			border-radius:15px;
+			image-rendering: pixelated;
+		}
+		p{
+			color:magenta;
+			font-size:15px;
+			width: 410px;
+			border: 2px solid magenta;
+			border-radius:5px;
+			padding: 10px;
+			background-color: rgba(10,10,10,0.9);
+		}
+		a{
+			border: 1px solid magenta;
+			background-color: rgba(10,10,10,0.9);
+			padding: 15px;
+			border-radius:15px;
+			margin: 5px;
+			text-decoration:none;
+			color:magenta;
+			font-size:15px;
+			vertical-align:middle;
+		}
+		#socials{
+			width:410px;
+			display:grid;
+			grid-auto-flow:column;
+			text-align:center;
+		}
+		a > img{
+			height:25px;
+		}
+	</style>
+	<body>
+		<img id="face" src="./res/Niko15.webp">	
+			<p id="bio">
+				<noscript style="font-size:50px; color:red">>:( Enable java script schizo</noscript>
+			</p>
+		<div id="socials">
+			<a target="_top" href="https://github.com/drerizo"><img src="./res/github.png"><span>  GitHub  <span></a>
+			<a target="_top" href="https://twitter.com/Erizo13_"><img src="./res/twitter.png"><span>  Twitter  <span></a>
+			<a target="_top" href="https://youtube.com/@erizo_"><img src="./res/youtube.png"><span>  Youtube  <span></a>
+			<a target="_top" href="https://discord.com/channels/@me/539100425463529472"><img src="./res/discord.webp"><span>  Discord  <span></a>
+		</div>
+	</body>
+	<script>document.getElementById('bio').innerText = `Hello, i'm Erizo an ${new Date().getFullYear() - 2006} year old software developer from Poland. This is kind of like my portfolio website where you can find software i made, but also my personal website where i keep my music and other cool stuff. Enjoy :3`;  ; document.getElementById('face').setAttribute("src",("./res/Niko" + (Math.round(Math.random() * 14)+1) + ".webp"))</script>
+</html>

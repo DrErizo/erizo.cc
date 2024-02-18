@@ -1,97 +1,88 @@
-:root {
-	--primary: rgb(108, 49, 108);
-	--secondary: rgb(43, 39, 48);
-	--theriary: rgb(73, 67, 82);
-}
 html {
-	height: 85%;
+	--color: rgb(0, 0, 0);
 }
 body {
-	background-color: var(--primary);
-	font-family: 'Sono', sans-serif;
-	height: 100%;
-}
-#photo {
-	height: 100%;
-	border-radius: 20px;
-}
-#content {
-	height: 100%;
+	background-color: rgb(34, 21, 36);
 	display: flex;
-	align-items: center;
+	background-image: url(res/Niko-with-the-sun2.jpg);
+	height: 95vh;
+	font-family: monospace;
+}
+a {
+	text-decoration: none;
+	color: rgb(209, 0, 216);
+	z-index:9999;
+}
+#category-label{
+	z-index: -9999;
+}
+#categories {
+	display: flex;
 	flex-direction: column;
-	padding: 10px;
-	margin-top: 5%;
+	width: 15%;
+	vertical-align: middle;
+	background-color: rgba(0, 0, 0, 0.081);
+	border: 2px solid rgb(95, 75, 95);
+	border-radius: 15px;
+	height: fit-content;
+	transform: translateY(10%);
+	box-shadow: 1px 2px 40px;
+	backdrop-filter: saturate(180%) blur(20px);
 }
-.button {
-	border: 3px solid var(--secondary);
-	padding: 10px;
-	background-color: var(--theriary);
-	color: rgb(161, 80, 202);
-	display: inline;
-	text-decoration: none;
+#categories > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	margin: 10px;
+	border: 1px solid;
+	font-size: 23px;
+	border-bottom: 4px solid;
+	color: rgb(255, 255, 255);
+	border: 1px solid rgb(114, 112, 112);
+	box-shadow: 1px 1px 20px black;
 	border-radius: 10px;
+	backdrop-filter: saturate(180%) blur(20px);
 }
-.button:hover {
-	background-color: blueviolet;
-	color: var(--secondary);
+#categories > *:hover {
+	width: 0.9;
+	border: 3px solid;
+	border-bottom: 10px solid;
+	animation: size-down 0.6s;
+	color: var(--color);
+	font-weight: 900;
+	margin: 10px;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 1px 2px 15px var(--color);
+	text-shadow: 1px 1px 5px var(--color);
 }
-#buttons {
-	grid-auto-flow: column;
-	text-align: center;
-	font-size: 30px;
-	display: grid;
-	width: 70%;
-	margin-bottom: 5px;
-	column-gap: 5px;
-	font-size: 3lvh;
+.activated {
+	border: 3px solid !important;
+	border-bottom: 10px solid !important;
+	color: var(--color) !important;
+	font-weight: 900 !important;
+	margin: 10px !important;
+	text-transform: uppercase !important;
+	box-shadow: 1px 2px 15px var(--color) !important;
+	text-shadow: 1px 1px 5px var(--color) !important;
 }
-#card {
-	background-color: var(--secondary);
-	width: 70%;
-	border-radius: 10px;
-	height: 60%;
-	text-align: center;
+main {
+	backdrop-filter: saturate(180%) blur(20px);
+	width: 100%;
+	margin: 20px;
+	background-color: rgba(85, 81, 81, 0.081);
+	box-shadow: 10px 11px 30px;
+	height: 100%;
+	border: 1px black solid;
+	border-radius: 20px;
+	overflow: hidden;
 }
-#main {
-	display: inline-block;
-	height: 70%;
-	margin: 0;
-	margin-top: 5%;
-}
-#socials {
-	color: var(--primary);
-	font-weight: bold;
-	float: right;
-	margin-left: 10px;
-	margin-top: 15%;
-	font-size: larger;
-}
-#red-btn {
-	width: 50px;
-}
-#socials > a {
-	text-decoration: none;
-	color: blueviolet;
-}
-#socials > a:hover {
-	text-decoration: underline;
-}
-#socials > a:visited {
-	color: blueviolet;
-}
-
-@media only screen and (max-width: 1200px) {
-	#photo {
-		margin-top: 20%;
-		height: 60%;
+@keyframes size-down {
+	from {
+		transform: scale(1.1);
 	}
-	#buttons {
-		grid-auto-flow: row;
-		row-gap: 5px;
-	}
-	#socials {
-		float: none;
-		font-size: 20px;
+	to {
+		transform: scale(1);
 	}
 }
