@@ -78,6 +78,27 @@ main {
 	border-radius: 20px;
 	overflow: hidden;
 }
+@media only screen and (max-width:800px){
+	body{
+		flex-direction: column !important;
+	}
+	#categories{
+		display:grid;
+		grid-auto-flow: row;
+		grid-template-columns: repeat(4,1fr);
+		width: 100%;
+		height: fit-content fixed;
+		margin-bottom: 10px;
+	}
+	#categories > *{
+		padding:0 5px;
+		font-size: 1.5em;
+	}
+	main{
+		width: 100%;
+		margin: 5% 0 0 0;
+	}
+}
 @keyframes size-down {
 	from {
 		transform: scale(1.1);
