@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "CozetteVector";
+  src: url("CozetteVector.otf");
+}
+
 html {
 	--color: rgb(0, 0, 0);
 }
@@ -6,7 +11,8 @@ body {
 	display: flex;
 	background-image: url(res/Niko-with-the-sun2.jpg);
 	height: 95vh;
-	font-family: monospace;
+	font-family: CozetteVector;
+	align-items:center;
 }
 a {
 	text-decoration: none;
@@ -20,16 +26,18 @@ a {
 	display: flex;
 	flex-direction: column;
 	width: 15%;
-	vertical-align: middle;
 	background-color: rgba(0, 0, 0, 0.081);
 	border: 2px solid rgb(95, 75, 95);
 	border-radius: 15px;
 	height: fit-content;
-	transform: translateY(10%);
+	min-height: 70%;
 	box-shadow: 1px 2px 40px;
 	backdrop-filter: saturate(180%) blur(20px);
+	flex-grow:1;
+	text-align: center;
 }
 #categories > * {
+	flex-grow:1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -41,7 +49,7 @@ a {
 	color: rgb(255, 255, 255);
 	border: 1px solid rgb(114, 112, 112);
 	box-shadow: 1px 1px 20px black;
-	border-radius: 10px;
+	border-radius: 1rem;
 	backdrop-filter: saturate(180%) blur(20px);
 }
 #categories > *:hover {
@@ -97,6 +105,10 @@ main {
 	main{
 		width: 100%;
 		margin: 5% 0 0 0;
+	}
+	#categories{
+		min-height: unset;
+		text-align: center;
 	}
 }
 @keyframes size-down {
