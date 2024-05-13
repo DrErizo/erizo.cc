@@ -1,0 +1,18 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+three{
+	display: flex;
+	width:100px;
+	height: 100px;
+	font-size:20px;
+	border-radius:15px;
+	border: 1px black solid;
+	color:pink;
+	background-color: rgba(0,0,0,0.5);
+	justify-content: center;
+	align-items:center;
+	text-align:center;
+}

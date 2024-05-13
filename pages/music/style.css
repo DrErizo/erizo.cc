@@ -28,12 +28,12 @@ body{
 }
 .tile{
 	width: 400px;
-	border: magenta 1px solid;
+	border: black 1px solid;
 	display: flex;
 	height: 100px;
 	border-radius: 15px;
 	align-items:center;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.5);
 }
 .thumbnail{
 	width: 80px;
@@ -47,7 +47,7 @@ legend{
 	color: white;
 }
 .title{
-	color: #535353;
+	color: pink;
 	font-size:20px;
 	text-align:center;
 }
@@ -373,4 +373,17 @@ video::-webkit-media-text-track-container u {
 }
 video::-webkit-media-text-track-container i {
 	font-style: italic;
+}
+@media only screen and (max-width:400px){
+	.year{
+		display:flex;
+		width:85%;
+	}
+	.tile{
+		padding:0px;
+		width:100%;
+	}
+	audio{
+		width:80%;
+	}
 }
