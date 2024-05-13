@@ -1,0 +1,34 @@
+@font-face {
+	font-family: "CozetteVector";
+	src: url("res/CozetteVector.otf");
+}
+
+a{
+	text-decoration: none;
+}
+html{
+	height:100%;
+}
+body{
+	height:100%;
+	flex-direction: column;
+	margin:0;		
+	display: flex;
+	font-family:CozetteVector;
+}
+.idea{
+	border: 1px solid black;
+	margin: 5px;
+	background-color: rgba(0,0,0,0.6);
+	color: pink;
+	border-radius:15px;
+	font-size:20px;
+	padding-left:10px;
+	padding:5px
+}
+a{
+	color: magenta;
+}
+span{
+	color: grey;
+}
