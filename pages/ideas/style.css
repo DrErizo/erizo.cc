@@ -32,3 +32,6 @@ a{
 span{
 	color: grey;
 }
+marquee {
+	padding:10px;
+}
