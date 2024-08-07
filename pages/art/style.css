@@ -1,4 +1,9 @@
+@font-face {
+	font-family: "CozetteVector";
+	src: url("https://erizo.cc/res/CozetteVector.otf");
+}
 body{
+	font-family: CozetteVector;
 	display: flex;
 	justify-content: center;
 	align-items:center;
