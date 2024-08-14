@@ -1,3 +1,4 @@
+const urlParams = new URLSearchParams(window.location.search);
 var state = 0;
 var prev;
 function set(str) {
@@ -17,3 +18,7 @@ function change(obj){
 		obj.classList.add('activated');
 		}
 }
+if(urlParams.get('page')){
+	set("./pages/" + urlParams.get('page') + "/index.html");
+}
+
