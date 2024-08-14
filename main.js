@@ -21,4 +21,3 @@ function change(obj){
 if(urlParams.get('page')){
 	set("./pages/" + urlParams.get('page') + "/index.html");
 }
-
