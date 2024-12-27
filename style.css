@@ -109,6 +109,25 @@ main {
 		min-height: unset;
 		text-align: center;
 	}
+} 
+@media only screen and (max-width:330px){
+	#category-label{
+		font-size: 12px;
+	}
+	#socials{
+		color: white !important;
+	}
+}
+@media only screen and (max-height:800px) and (min-width:800px){
+	#categories{
+		display: grid;
+		width: 280px;
+		grid-template-columns: 1fr auto;
+		justify-items: center;
+	}
+	#categories > *{
+		width: 100px
+	}
 }
 @keyframes size-down {
 	from {

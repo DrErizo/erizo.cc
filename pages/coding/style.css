@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "CozetteVector";
-	src: url("res/CozetteVector.otf");
+	src: url("https://erizo.cc/res/CozetteVector.otf");
 }
 
 html{
@@ -15,31 +15,39 @@ body{
 	font-family:CozetteVector;
 }
 .year{
-	display: grid;
+	display: flex;
 	gap:20px;
-	grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-	justify-content: space-evenly;
+	justify-content: center;
 	background-color: rgba(35,35,35,0.5) ;
 	border-radius: 15px;
-	width: 95%;
-	min-height: 500px;
+	width: 90%;
+	height: auto ;
+	padding:30px;
 	border: purple 2px solid;
 	margin-top: 30px;
+	flex-wrap: wrap;
 }
 .tile{
-	width: 400px;
+	width:200px;
 	border: black 1px solid;
 	display: flex;
-	height: 100px;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
 	border-radius: 15px;
 	align-items:center;
 	background-color: rgba(0,0,0,0.5);
+	padding:10px;
+}
+.desc{
+	color: pink;
 }
 .thumbnail{
 	width: 80px;
+	image-rendering: pixelated;
 	height: 80px;
 	border-radius: 15px;
-	margin-left: 10px;
 }
 legend{
 	font-size:50px;
@@ -47,7 +55,7 @@ legend{
 	color: white;
 }
 .title{
-	color: pink;
+	color: hotpink;
 	font-size:20px;
 	text-align:center;
 }
