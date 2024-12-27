@@ -11,38 +11,49 @@
 		<title>Erizo.cc</title>
 	</head>
 	<body>
-		<div class="idea"><span>0.</span> Hexagonal Chess.</div>
-			<div class="idea"><span>1. </span>Green-white gradient that radiates from your cursor when you press LMB that interacts with solid objects.</div>
-			<div class="idea"><span>2. </span>2D Shapes popping into existence and transforming in size, shape, color (possibly a celular automate like gameplay).</div>
-			<div class="idea"><span>3. </span>"Achtung Kurve" like multiplayer game made in sfml.</div>
-			<div class="idea"><span>4. </span>Another color based cellular automata (make it focused on colonies of pixels)</div>
-			<div class="idea"><span>5. </span>Convert Camera output to a rule of the cellular automata from point 5.</div>
-			<div class="idea"><span>6. </span>3D cellular automata that uses .obj files to render the initial state of the world.</div>
-			<div class="idea"><span>7. </span>Image to conways game of life converter</div>
-			<div class="idea"><span>8. </span>Converging expansion of 3D spheres.</div>
-			<div class="idea"><span>9. </span>Dynamic Color mixing/Oil paint simulation</div>
-			<div class="idea"><span>10. </span>A Badass audio visualiser.</div>
-			<div class="idea"><span>11. </span>Motion Extraction program (<a href="https://www.youtube.com/watch?v=NSS6yAMZF78" target="_blank" rel="noreferrer">video by Posy</a> for more info)</div>
-			<div class="idea"><span>12. </span>Cellular automata that takes sound input as enviorment.</div>
-			<div class="idea"><span>13. </span>Yet another turtle framework.</div>
-			<div class="idea"><span>14. </span>Gravity simulation.</div>
-			<div class="idea"><span>15. </span>Simple Touhou like game.</div>
-			<div class="idea"><span>16. </span>Explosion simulation</div>
-			<div class="idea"><span>17. </span>Realistic liquid simulation.</div>
-			<div class="idea"><span>18. </span>Fun little damage sandbox game where you abuse the screen.</div>
-			<div class="idea"><span>19. </span>Multiplayer r/Place made in SDL.</div>
-			<div class="idea"><span>20. </span>Pixel pattern manipulation (see <a href="https://www.appbrain.com/app/triple-a/com.sunglab.tripleafree" target="_blank" rel="noreferrer">Triple A app by SungLab Inc</a> for more details)</div>
-			<div class="idea"><span>21. </span>Morphing between 2 images.</div>
-			<div class="idea"><span>22. </span>Function Grapher.</div>
-			<div class="idea"><span>23. </span>Visualization of pi being irrational.</div>
-			<div class="idea"><span>24. </span>Fracatal generator</div>
-			<div class="idea"><span>25. </span>Add 3D graphics module to <a href="https://github.com/rxn7/fif" target="_blank" rel="noreferrer">fif</a></div>
-			<div class="idea"><span>26. </span>Minesweeper.</div>
-			<div class="idea"><span>27. </span>Fork of Kitty with bitmap font support</div>
-			<div class="idea"><span>28. </span>Tetris clone</div>
-			<div class="idea"><span>29. </span>Bouncing square/ball that plays music</div>
-			<div class="idea"><span>30. </span><a href="https://github.com/rxn7/weapon-strider" target="_blank" rel="noreferrer">Weapon Strider</a> in Godot</div>
-			<div class="idea"><span>31. Chess but you can upgrade the pieces (upgrading changes the design of the piece) </div>
-			<span>_</span>
+		<div class="idea">Hexagonal Chess.</div>
+		<div class="idea">Green-white gradient that radiates from your cursor when you press LMB that interacts with solid objects.</div>
+		<div class="idea">2D Shapes popping into existence and transforming in size, shape, color (possibly a celular automate like gameplay).</div>
+		<div class="idea">"Achtung Kurve" like multiplayer game made in sfml.</div>
+		<div class="idea">Another color based cellular automata (make it focused on colonies of pixels)</div>
+		<div class="idea">Convert Camera output to a rule of the cellular automata from point 5.</div>
+		<div class="idea">3D cellular automata that uses .obj files to render the initial state of the world.</div>
+		<div class="idea">Image to conways game of life converter</div>
+		<div class="idea">Converging expansion of 3D spheres.</div>
+		<div class="idea">Dynamic Color mixing/Oil paint simulation</div>
+		<div class="idea">A Badass audio visualiser.</div>
+		<div class="idea">Motion Extraction program (<a href="https://www.youtube.com/watch?v=NSS6yAMZF78" target="_blank" rel="noreferrer">video by Posy</a> for more info)</div>
+		<div class="idea">Cellular automata that takes sound input as enviorment.</div>
+		<div class="idea">Yet another turtle framework.</div>
+		<div class="idea">Gravity simulation.</div>
+		<div class="idea">Simple Touhou like game.</div>
+		<div class="idea">Explosion simulation</div>
+		<div class="idea">Realistic liquid simulation.</div>
+		<div class="idea">Fun little damage sandbox game where you abuse the screen.</div>
+		<div class="idea">Multiplayer r/Place made in SDL.</div>
+		<div class="idea">Pixel pattern manipulation (see <a href="https://www.appbrain.com/app/triple-a/com.sunglab.tripleafree" target="_blank" rel="noreferrer">Triple A app by SungLab Inc</a> for more details)</div>
+		<div class="idea">Morphing between 2 images.</div>
+		<div class="idea">Function Grapher.</div>
+		<div class="idea">Visualization of pi being irrational.</div>
+		<div class="idea">Fracatal generator</div>
+		<div class="idea">Add 3D graphics module to <a href="https://github.com/rxn7/fif" target="_blank" rel="noreferrer">fif</a></div>
+		<div class="idea">Minesweeper.</div>
+		<div class="idea">Fork of Kitty with bitmap font support</div>
+		<div class="idea">Tetris clone</div>
+		<div class="idea">Bouncing square/ball that plays music</div>
+		<div class="idea"><a href="https://github.com/rxn7/weapon-strider" target="_blank" rel="noreferrer">Weapon Strider</a> in Godot</div>
+		<div class="idea">Chess but you can upgrade the pieces (upgrading changes the design of the piece) </div>
+		<span>_</span>
 	</body>
+
+	<script>
+		const ideas = document.getElementsByClassName('idea')
+		let idea_idx = 0
+
+		for(const idea of ideas) {
+			const span = document.createElement('span')
+			span.innerText = `${idea_idx++}. `
+			idea.prepend(span)
+		}
+	</script>
 </html>
