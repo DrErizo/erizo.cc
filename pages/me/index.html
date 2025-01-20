@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="./res/Niko2.webp" type="image/x-icon" />
+		<link rel="stylesheet" href="./style.css">
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=0.9, minimum-scale=0.9, user-scalable=no"
+		/>
+		<title>Erizo.cc</title>
+	</head>
+	<body>
+
+		<p style="color: crimson; text-align:center; width: 300px">"Me" page remake is on the way</p>
+		<img id="face" src="../../res/Niko5.webp">	
+			<p id="bio">
+				<noscript style="font-size:50px; color:red">>:( Enable java script schizo</noscript>
+			</p>
+		<div id="socials">
+			<a target="_top" href="https://github.com/drerizo"><img src="../../res/github.png"><span>  GitHub  <span></a>
+			<a target="_top" href="https://twitter.com/Erizo13_"><img src="../../res/twitter.png"><span>  Twitter  <span></a>
+			<a target="_top" href="https://youtube.com/@erizo_"><img src="../../res/youtube.png"><span>  Youtube  <span></a>
+			<a target="_top" href="https://discord.com/channels/@me/539100425463529472"><img src="../../res/discord.webp"><span>  Discord  <span></a>
+		</div>
+		<div id="websites">
+			<p><a id="sites" target="_blank" href="mystery" style="all: unset">press to visit a random friendly site :3</a></p>
+		</div>
+	</body>
+	<script>
+		function playSound(str){
+			let buttonSound = new Audio(str);
+			buttonSound.play();
+		}
+		document.getElementById('bio').innerText = `Hello, i'm Erizo an ${new Date().getFullYear() - 2006} year old software developer from Poland. This is kind of like my portfolio website where you can find software i made, but also my personal website where i keep my music and other cool stuff. Enjoy :3`;
+
+		document.getElementById('face').setAttribute("src",("../../res/Niko" + (Math.round(Math.random() * 14)+1) + ".webp"));
+
+		var coolSites = ["https://rxn.lol","https://blackshibe.net","https://femboys.institute"]
+
+		let btn = document.getElementById('sites')
+		btn.addEventListener('mousedown', function () {
+			playSound("../../res/button-sound.mp3");
+
+			rnd = (Math.random() * coolSites.length) << 0
+			btn.href = coolSites[rnd]
+		})
+		btn.addEventListener('mouseout', function () {
+			btn.href = 'mystery'
+		})
+	
+	</script>
+</html>
