@@ -1,0 +1,41 @@
+#controls{
+	display:flex;
+	width: 10%;
+	height: 50px
+}
+#controls > img{
+ -webkit-filter: invert(100%);
+}
+#player{
+	display:flex;
+	flex-direction: column;
+	position: absolute;
+	height: 150px;
+	bottom:0;
+	width:100%;
+	align-items: center;
+	background: rgba(0,0,0,0.7);
+}
+.player-container {
+	width: 100%;
+	background: #1e1e1e;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+#waveform {
+	width: 100%;
+	height: 100px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+button {
+	padding: 10px 20px;
+	border: none;
+	background: #ff5722;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+}

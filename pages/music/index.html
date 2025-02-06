@@ -8,25 +8,56 @@
 			content="width=device-width, initial-scale=0.9, minimum-scale=0.9, user-scalable=no"
 		/>
 		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./music-player.css">
+		<script src="https://unpkg.com/wavesurfer.js"></script>
 		<title>Erizo.cc</title>
 	</head>
 	<body>
 		<fieldset class="year">
 		<legend>2025</legend>
-			<!-- TEMPLATE 
-			<div class="tile">	
+			<!-- <div class="single">	
 				<img class="thumbnail" src="../../res/Niko2.webp" alt="1000 words">
 				<div class="song-info">
 					<p class="title"> Dark Convergence</p>
-					<p class="album">Dark</p>
+					<p style="color: hotpink; margin: 0">Dark</p>
 				</div>
 			</div> -->
+			<div class="album">	
+				<img class="thumbnail" src="../../res/Niko13.webp" alt="1000 words">
+				<div class="song-info">
+					<p class="title" style="color: hotpink">Sundial</p>
+					<div class="track-container">
+						<div class="track">
+							<svg class="play-button"  style="fill:#fff" viewBox="0 0 36 36" width="100%"><path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path></svg>
+							<p>1. Morning</p>
+						</div>
+						<div class="track">
+							<svg class="play-button"  style="fill:#fff" viewBox="0 0 36 36" width="100%"><path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path></svg>
+							<p>2. Noon</p>
+						</div>
+						<div class="track">
+							<svg class="play-button"  style="fill:#fff" viewBox="0 0 36 36" width="100%"><path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path></svg>
+							<p>3. Afternoon</p>
+						</div>
+						<div class="track">
+							<svg class="play-button" style="fill:#fff" viewBox="0 0 36 36" width="100%"><path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path></svg>
+							<p>4. Midnight</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</fieldset>
-		<!-- <div id="player">
-				<audio controls>
-					<source src="../../res/Dark Convergence.ogg" type="audio/ogg">
-				</audio>
-		</div> -->
-		<script type="module" src="./music.js"></script>
+		<div id="player">
+			<div id="controls">
+				<img width="40px" src="../../res/prev-song.png">
+				<svg style="fill:#fff" viewBox="0 0 36 36"><path id="player-play" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path></svg>
+				<img width="40px" src="../../res/next-song.png">
+			</div>
+			<div id="waveform"></div>
+		</div>
+		<script>
+		</script>
+		
+		<script src="music.js"></script>
 	</body>
 </html>
