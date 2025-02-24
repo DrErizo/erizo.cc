@@ -1,27 +1,29 @@
-
-@media only screen and (max-width:400px){
-	.entry{
-		font-size: 10px !important;
-	}
-}
 @font-face {
 	font-family: "CozetteVector";
 	src: url("https://erizo.cc/res/CozetteVector.otf");
+}
+html{
+	height: 80%;
 }
 body{
 	display:flex;
 	gap:10px;
 	flex-direction: column;
 	padding:10px;
+	height: 100%;
 }
 .entry{
 	display:flex;
+	align-items:center;
+	font-size:15px;
+	margin-top:5px;
+	margin-bottom:5px;
+	font-family:CozetteVector;
+}
+#entries{
 	border: 2px solid #202020;
 	border-radius:20px;
 	background-color:rgba(13,13,13,0.7);
-	align-items:center;
-	font-size:15px;
-	font-family:CozetteVector;
 }
 .title{
 	color:pink;
@@ -53,6 +55,9 @@ body{
 	padding: 20px;
 	margin: 5px;
 	justify-content: center;
+	border: 2px solid #202020;
+	border-radius:20px;
+	background-color:rgba(13,13,13,0.7);
 }
 #writing-category > *:hover{
 	cursor:pointer;
