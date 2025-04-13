@@ -3,6 +3,7 @@
 	<head>
 		<link rel="shortcut icon" href="./res/Niko2.webp" type="image/x-icon" />
 		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="../../res/cursor.css">
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -11,20 +12,46 @@
 		<title>Erizo.cc</title>
 	</head>
 	<body>
+		<div id="left">
+			<h1 id="greeter" class="greeter-mobile" style="display: none">Erizo's site</h1>
+			<div id="Niko"><img id="oneshot" src="../../res/walking-niko.gif"> </script></div>
+			<img id="face" src="../../res/face.jpg">		
+			<h1 id="greeter" style="font-size: 20px; text-shadow: none">Awesome people >_<: </h1>	
+			<div id="badges">
+				<a target="_blank" href="//blackshibe.net"><img class="badge" src="../../res/88x31-blackshibe.png"></a>
+				<a target="_blank" href="//rxn.lol"><img class="badge" src="../../res/88x31-rxn.png"></a>
+				<a target="_blank" href="//femboys.institute"><img class="badge" src="../../res/88x31-femboys-institute.png"></a>
+				<a target="_blank" href="//sdomi.pl/"><img class="badge" src="//sdomi.pl/img/button.bmp" alt="An 88x31 button. Witch hat on the left, text 'sdomi' on the right. The background is procedurally generated every 30 or so seconds." title="sdomi's webpage"></a>
+				<a target="_blank" href="https://cadence.moe" ><img class="badge "src="https://cadence.moe/static/img/cadence_now.png" alt="The text &quot;cadence now!&quot; on a purple background. There is a moon-shaped logo on the left side and a tiny star in the bottom right."></a>
+			</div>
+			<hr style="border-color: hotpink;">
+			<h1 id="greeter" style="font-size: 20px; text-shadow: none">Badges:</h1>	
+			<div id="badges">
+				<img class="badge" src="https://cyber.dabamos.de/88x31/learn_html.gif">
+				<img class="badge" src="../../res/contains-java.png">
+				<img class="badge" src="https://cyber.dabamos.de/88x31/kitten88.gif">
+				<img class="badge" src="https://cyber.dabamos.de/88x31/magic.gif">
+				<img class="badge" src="https://cadence.moe/static/img/created-by-a-human/created-by-a-human-with-a-heart-1x.png">
+				<img class="badge" src="../../res/firefox.png">
+				<img class="badge" src="../../res/arch_linux.png">
+				<img class="badge" src="../../res/ublock.png">
+				<img class="badge" src="../../res/gimp.gif">
+				<img class="badge" src="../../res/krita.gif">
+				<img class="badge" src="../../res/3dot5mmfc-button.gif">
+				<img class="badge" src="../../res/MadeOwn.gif">
+			</div>
+		</div>	
+		<div id="right">
+			<h1 id="greeter" class="greeter-desktop">Erizo's site</h1>
+			<p class="textbox"><noscript style="fonst-size:50px">ENABLE JAVA SCRIPT SCHIZO >:(</noscript></p>
+			<h1 id="greeter" style="font-size: 30px">socials and contact:</h1>	
 
-		<p style="color: crimson; text-align:center; width: 300px">"Me" page remake is on the way</p>
-		<img id="face" src="../../res/Niko5.webp">	
-			<p id="bio">
-				<noscript style="font-size:50px; color:red">>:( Enable java script schizo</noscript>
-			</p>
-		<div id="socials">
-			<a target="_top" href="https://github.com/drerizo"><img src="../../res/github.png"><span>  GitHub  <span></a>
-			<a target="_top" href="https://twitter.com/Erizo13_"><img src="../../res/twitter.png"><span>  Twitter  <span></a>
-			<a target="_top" href="https://youtube.com/@erizo_"><img src="../../res/youtube.png"><span>  Youtube  <span></a>
-			<a target="_top" href="https://discord.com/channels/@me/539100425463529472"><img src="../../res/discord.webp"><span>  Discord  <span></a>
-		</div>
-		<div id="websites">
-			<p><a id="sites" target="_blank" href="mystery" style="all: unset">press to visit a random friendly site :3</a></p>
+			<a class="textbox" target="_top" href="mailto:erizo_dev@pm.me" style="margin-bottom: 10px; justify-content:center; display:flex"><img src="../../res/mail.png"><span>e-mail: erizo_dev@pm.me<span></a>
+				<div id="socials">
+					<a class="textbox" target="_top" href="https://twitter.com/Erizo13_"><img src="../../res/twitter.png"><span>  Twitter  <span></a>
+					<a class="textbox" target="_top" href="https://youtube.com/@erizo_"><img src="../../res/youtube.png"><span>  Youtube  <span></a>
+					<a class="textbox" target="_top" href="https://discord.com/channels/@me/539100425463529472"><img src="../../res/discord.webp"><span>  Discord  <span></a>	
+				</div>
 		</div>
 	</body>
 	<script>
@@ -32,22 +59,9 @@
 			let buttonSound = new Audio(str);
 			buttonSound.play();
 		}
-		document.getElementById('bio').innerText = `Hello, i'm Erizo an ${new Date().getFullYear() - 2006} year old software developer from Poland. This is kind of like my portfolio website where you can find software i made, but also my personal website where i keep my music and other cool stuff. Enjoy :3`;
-
-		document.getElementById('face').setAttribute("src",("../../res/Niko" + (Math.round(Math.random() * 14)+1) + ".webp"));
-
-		var coolSites = ["https://rxn.lol","https://blackshibe.net","https://femboys.institute"]
-
-		let btn = document.getElementById('sites')
-		btn.addEventListener('mousedown', function () {
-			playSound("../../res/button-sound.mp3");
-
-			rnd = (Math.random() * coolSites.length) << 0
-			btn.href = coolSites[rnd]
-		})
-		btn.addEventListener('mouseout', function () {
-			btn.href = 'mystery'
-		})
-	
+		document.querySelector('.textbox').innerHTML = `Welcome to my place!<br> I'm Erizo a ${new Date().getFullYear() - 2006} year old from poland trying to be a software developer. I made this site to show off the <b>cool</b> stuff that i made/am making. And since i can't really settle on one thing that also includes my <b>engineering</b> projects, <b>music</b> i made as well as my <b>awful art</b> and a blog where i post my mad rants next to my works of fiction. Feel free to look into the <b>web shit</b> page where you will find my web games. Enjoy :3`;
+		document.getElementById("badges").addEventListener('mousedown', function () {
+				playSound("../../res/button-sound.mp3");
+			})
 	</script>
 </html>

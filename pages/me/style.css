@@ -1,131 +1,150 @@
 @font-face {
-	font-family: "CozetteVector";
-	src: url("https://erizo.cc/res/CozetteVector.otf");
+  font-family: "CozetteVector";
+  src: url("res/CozetteVector.otf");
 }
-#websites{
-	box-sizing: unset;
-	width: 30%;
-	height: 20px;
+@keyframes move
+{
+    0%{
+        left: 0;
+		transform: scaleX(1);
+    }
+    49.999%{
+      transform: scaleX(1);
+    }
+    50%{
+      left: calc(100% - 32px);
+      transform: scaleX(-1);
+    }
+    100%{
+      left: 0%;
+      transform: scaleX(-1);
+    }
 }
-#websites > * {
-	height: 25px !important;
-	width: 100%;
-	cursor: pointer;
+body,html{
 	overflow: hidden;
-	white-space: nowrap;
-	user-select: none;
-	text-align: center;
-	background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
-	image-rendering: pixelated;
-	border: 2px solid #000;
-	width: 100%; height: 100%;
-	padding-bottom: .3em;
-	color: #DDD;
-	text-shadow: 2px 2px #000A;
-	box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
-}	
-/* Mouse over */
-#websites > *:hover {
-	background-color: rgba(100, 100, 255, .45);
-	text-shadow: 2px 2px #202013CC;
-	color: #FFFFA0;
-}
-#websites > *:active {
-	box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
-}
-
-html{
-	height:100%;
-}
-body{
-	height:100%;
-	justify-content:center;
-	align-items:center;
-	flex-direction: column;
-	margin:0;		
-}
-body{
+	height: 100%;
+	width: 100%;
 	display: flex;
-	font-family:CozetteVector;
-}
-#face{
-	margin:0;
-	width: 300px;
-	height:300px;
-	border-radius:15px;
-	image-rendering: pixelated;
-}
-p{
-	color:magenta;
-	font-size:20px;
-	width: 410px;
-	border: 2px solid magenta;
-	border-radius:5px;
-	padding: 10px;
-	background-color: rgba(10,10,10,0.9);
+	flex-direction: row;
+	margin: 20px;
+	gap: 10px;
+	font-family: CozetteVector;
 }
 a{
+	text-decoration: none;
+}
+b{
+	font-weight: 900;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 0.95em;
+	text-shadow: 5px 4px 2px rgba(0,0,0,0.7); 
+}
+#left{
+	height: 100%;
+	width: 45%;
+}
+#right{
+	height: 100%;
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+	margin-top:30px;
+}
+#Niko{
+	width: 100%;
+}
+#oneshot{
+	position: relative;
+	animation: move 20s linear infinite;	
+}
+#badges{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	align-items: center;
+}
+.badge{
+	width: 15%;
+	image-rendering: pixelated;
+}
+#greeter{
+	color:hotpink;
+	font-size: 60px;
+	text-shadow: 3px 3px 0px pink, 15px 15px 5px rgba(0, 0, 0, 0.7);
+	-webkit-text-stroke: 1px pink;
+}
+.textbox{
+	color: pink;
+	font-weight:unset;
+	font-size: 20px;
 	border: 1px solid magenta;
-	background-color: rgba(10,10,10,0.9);
-	padding: 15px;
-	border-radius:15px;
-	margin: 5px;
-	text-decoration:none;
-	color:magenta;
-	font-size:15px;
-	vertical-align:middle;
+	width: 70%;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(23,23,23,0.7);
 }
 #socials{
-	width:410px;
-	display:grid;
-	grid-auto-flow:column;
-	text-align:center;
-	align-self:center;
+	display: flex;
+	width: 73%;
+	gap: 10px;
 }
-a > img{
-	height:25px;
+
+.textbox > img{
+	width: 20px;
 }
-@media only screen and (max-width:800px){
+#face{
+	width: 100%;
+	height: 40%;
+	image-rendering: pixelated;
+	border: hotpink solid 1px;
+	border-radius: 15px;
+	object-fit: cover;
+}
+@media screen and (max-width: 500px){
 	#face{
-		margin-top: 5%;
+		height:150px;
+		object-fit: cover;
+		width: 95%;
+		object-position: 0px -100px;
 	}
-	#bio{
-		width: 90%;
+	#Niko{
+		width: 50%;
+	}
+	.badge{
+		width: 30%;	
+	}
+	#left{
+		margin:0;
+		text-align: center;
+		height: fit-content;
+		width:100%;
+	}
+	.textbox{
+		width:95%;
+	}
+	#right{
+		margin:0;
+		height: fit-content;
+		width:95%;
+	}
+	.greeter-mobile{
+		display: block !important;
+	}
+	.greeter-desktop{
+		display: none !important;
 	}
 	#socials{
-		width: 100%;
-		display: grid;
-		grid-template-rows: repeat(1fr);
+		width:100%;
+		flex-grow: 1;
+		margin-bottom: 20px;
 	}
-	#socials > *{
-		width: 1fr;
-		margin: auto 3px;
-	}  
-	#websites{
-		width: 80%;
-	}
-}
-@media screen and (max-width:400px){
-	#socials {
-		grid-template-rows: 1fr auto;
-			gap: 5px;
-	}
-	#face{
-		width:200px;
-		height: 200px;
-	}
-	#socials > a{
-		display: flex;
+	html,body{
+		flex-direction: column !important;
+		padding:0;
+		overflow:scroll;
+		margin:0;
+		width:100%;
 		align-items: center;
-		justify-content:center;
-		gap:5px;
-	}
-	#websites > *{
-		font-size: 14px;
-	}
-}
-@media screen and (max-width: 1200px){
-	#websites > *{
-		font-size: 15px;
 	}
 }

@@ -1,0 +1,6 @@
+html{
+	cursor: url(./Niko-default.gif), auto;
+}
+a:hover{
+	cursor: url(./Niko-link.gif), pointer;
+}
