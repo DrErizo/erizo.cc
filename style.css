@@ -4,6 +4,7 @@
 }
 html {
 	--color: rgb(0, 0, 0);
+	--tint: rgb(0, 0, 0);
 }
 body {
 	background-color: rgb(34, 21, 36);
@@ -21,7 +22,8 @@ a {
 #views{
 	width:250px;
 }
-#category-label{
+.category-label{
+	text-shadow: 2px 2px 0px var(--color), 7px 7px 15px var(--color);
 	z-index: -9999;
 }
 #categories {
@@ -53,6 +55,7 @@ a {
 	box-shadow: 1px 1px 20px black;
 	border-radius: 1rem;
 	backdrop-filter: saturate(180%) blur(20px);
+	border-color: var(--color)
 }
 #categories > *:hover {
 	width: 0.9;
@@ -66,6 +69,10 @@ a {
 	text-transform: uppercase;
 	box-shadow: 1px 2px 15px var(--color);
 	text-shadow: 1px 1px 5px var(--color);
+
+	.category-label{
+		text-shadow: 3px 3px 0px color-mix(in srgb, var(--color) 50%, var(--tint) 50%);
+	}
 }
 .activated {
 	border: 3px solid !important;
@@ -76,6 +83,10 @@ a {
 	text-transform: uppercase !important;
 	box-shadow: 1px 2px 15px var(--color) !important;
 	text-shadow: 1px 1px 5px var(--color) !important;
+
+	.category-label{
+		text-shadow: 3px 3px 0px color-mix(in srgb, var(--color) 50%, var(--tint) 50%);
+	}
 }
 main {
 	backdrop-filter: saturate(180%) blur(20px);
@@ -114,7 +125,7 @@ main {
 	}
 } 
 @media only screen and (max-width:330px){
-	#category-label{
+	.category-label{
 		font-size: 12px;
 	}
 	#socials{
