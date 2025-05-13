@@ -21,7 +21,8 @@
     }
 }
 body,html{
-	overflow: hidden;
+	overflow: scroll;
+	overflow-x: hidden;
 	height: 100%;
 	width: 100%;
 	display: flex;
