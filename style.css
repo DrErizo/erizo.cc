@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "CozetteVector";
-  src: url("res/CozetteVector.otf");
+	font-family: 'CozetteVector';
+	src: url('res/CozetteVector.otf');
 }
 html {
 	--color: rgb(0, 0, 0);
@@ -12,17 +12,17 @@ body {
 	background-image: url(res/Niko-with-the-sun2.jpg);
 	height: 95vh;
 	font-family: CozetteVector;
-	align-items:center;
+	align-items: center;
 }
 a {
 	text-decoration: none;
 	color: rgb(209, 0, 216);
-	z-index:9999;
+	z-index: 9999;
 }
-#views{
-	width:250px;
+#views {
+	width: 250px;
 }
-.category-label{
+.category-label {
 	text-shadow: 2px 2px 0px var(--color), 7px 7px 15px var(--color);
 	z-index: -9999;
 }
@@ -37,11 +37,11 @@ a {
 	min-height: 70%;
 	box-shadow: 1px 2px 40px;
 	backdrop-filter: saturate(180%) blur(20px);
-	flex-grow:1;
+	flex-grow: 1;
 	text-align: center;
 }
 #categories > * {
-	flex-grow:1;
+	flex-grow: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,7 +55,7 @@ a {
 	box-shadow: 1px 1px 20px black;
 	border-radius: 1rem;
 	backdrop-filter: saturate(180%) blur(20px);
-	border-color: var(--color)
+	border-color: var(--color);
 }
 #categories > *:hover {
 	width: 0.9;
@@ -70,7 +70,7 @@ a {
 	box-shadow: 1px 2px 15px var(--color);
 	text-shadow: 1px 1px 5px var(--color);
 
-	.category-label{
+	.category-label {
 		text-shadow: 3px 3px 0px color-mix(in srgb, var(--color) 50%, var(--tint) 50%);
 	}
 }
@@ -84,7 +84,7 @@ a {
 	box-shadow: 1px 2px 15px var(--color) !important;
 	text-shadow: 1px 1px 5px var(--color) !important;
 
-	.category-label{
+	.category-label {
 		text-shadow: 3px 3px 0px color-mix(in srgb, var(--color) 50%, var(--tint) 50%);
 	}
 }
@@ -97,51 +97,50 @@ main {
 	height: 100%;
 	border: 1px black solid;
 	border-radius: 20px;
-	overflow-x: hidden;
-
+	overflow: hidden;
 }
-@media only screen and (max-width:800px){
-	body{
+@media only screen and (max-width: 800px) {
+	body {
 		flex-direction: column !important;
 	}
-	#categories{
-		display:grid;
+	#categories {
+		display: grid;
 		grid-auto-flow: row;
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(4, 1fr);
 		width: 100%;
 		height: fit-content fixed;
 		margin-bottom: 10px;
 	}
-	#categories > *{
-		padding:0 5px;
+	#categories > * {
+		padding: 0 5px;
 		font-size: 1.5em;
 	}
-	main{
+	main {
 		width: 100%;
 		margin: 5% 0 0 0;
 	}
-	#categories{
+	#categories {
 		min-height: unset;
 		text-align: center;
 	}
-} 
-@media only screen and (max-width:330px){
-	.category-label{
+}
+@media only screen and (max-width: 330px) {
+	.category-label {
 		font-size: 12px;
 	}
-	#socials{
+	#socials {
 		color: white !important;
 	}
 }
-@media only screen and (max-height:800px) and (min-width:800px){
-	#categories{
+@media only screen and (max-height: 800px) and (min-width: 800px) {
+	#categories {
 		display: grid;
 		width: 280px;
 		grid-template-columns: 1fr auto;
 		justify-items: center;
 	}
-	#categories > *{
-		width: 100px
+	#categories > * {
+		width: 100px;
 	}
 }
 @keyframes size-down {
