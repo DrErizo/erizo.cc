@@ -99,7 +99,7 @@ pezzazz{
         flex-direction: column;
     }
     #neofetch{
-    	font-size: 1.9vw;
+    	font-size: 1.8vw;
     }
     #neofetch,body,main,.box,#counters-container{
 	box-sizing: border-box;
