@@ -22,6 +22,9 @@ a {
 #views {
 	width: 250px;
 }
+#left{
+	width:20%;
+}
 .category-label {
 	text-shadow: 2px 2px 0px var(--color), 7px 7px 15px var(--color);
 	z-index: -9999;
@@ -33,19 +36,18 @@ a {
 	background-color: rgba(0, 0, 0, 0.081);
 	border: 2px solid rgb(95, 75, 95);
 	border-radius: 15px;
-	height: fit-content;
 	min-height: 70%;
 	box-shadow: 1px 2px 40px;
 	backdrop-filter: saturate(180%) blur(20px);
 	flex-grow: 1;
 	text-align: center;
+	font-size:2vw;
 }
 #categories > * {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 70px;
 	margin: 10px;
 	border: 1px solid;
 	font-size: 23px;
@@ -103,6 +105,9 @@ main {
 	body {
 		flex-direction: column !important;
 	}
+	#left{
+		width:100%;
+	}
 	#categories {
 		display: grid;
 		grid-auto-flow: row;
@@ -122,25 +127,6 @@ main {
 	#categories {
 		min-height: unset;
 		text-align: center;
-	}
-}
-@media only screen and (max-width: 330px) {
-	.category-label {
-		font-size: 12px;
-	}
-	#socials {
-		color: white !important;
-	}
-}
-@media only screen and (max-height: 800px) and (min-width: 800px) {
-	#categories {
-		display: grid;
-		width: 280px;
-		grid-template-columns: 1fr auto;
-		justify-items: center;
-	}
-	#categories > * {
-		width: 100px;
 	}
 }
 @keyframes size-down {
