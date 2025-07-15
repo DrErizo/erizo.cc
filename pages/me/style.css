@@ -101,7 +101,7 @@ b {
 	border-radius: 15px;
 	object-fit: cover;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
 	#face {
 		height: 150px;
 		object-fit: cover;
