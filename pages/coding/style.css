@@ -2,10 +2,16 @@
 	font-family: 'CozetteVector';
 	src: url('https://erizo.cc/res/CozetteVector.otf');
 }
+html{
+    display: flex;
+    justify-content: center;
+}
 html {
 	height: 100%;
+    width: 100%;
 }
 body {
+    width: 90%;
 	height: 100%;
 	align-items: center;
 	flex-direction: column;
@@ -13,93 +19,179 @@ body {
 	display: flex;
 	font-family: CozetteVector;
 }
-.year {
-	display: flex;
-	gap: 20px;
-	justify-content: center;
-	background-color: rgba(35, 35, 35, 0.5);
-	border-radius: 15px;
-	width: 90%;
-	height: auto;
-	padding: 30px;
-	border: purple 2px solid;
-	margin-top: 30px;
-	flex-wrap: wrap;
+.project-container > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
-.tile {
-	width: 90%;
-	border: black 1px solid;
-	display: flex;
-	border-radius: 15px;
-	align-items: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 10px;
+.project-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
 }
-.tile > a {
-	display: flex;
-	width: 100%;
+#projects{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    column-gap: 30px;
+    row-gap: 15px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
 }
-.desc {
-	color: pink;
-	display: flex;
-	align-items: center;
-    margin: 0;
+.project-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  pointer-events: none;
 }
-.thumbnail::before{
+.project-container{
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#left{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
-	width: 80px;
-	height: 60px;
+    width: 20%;
+    height: 100%;
+}
+#right{
+    width: 80%;
+    height: 100%;
+}
+#icon{
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
     border-radius: 15px;
-    color: white;
-    font-size: 13px;
+    background-color: #232323;
+    padding: 5px;
+    margin: 1vw;
 }
-.thumbnail {
-    display: flex;
-    align-self: center;
-	width: 80px;
-	height: 60px;
-	image-rendering: pixelated;
-	border-radius: 15px;
+.title{
+    color: pink;
 }
-legend {
-	font-size: 50px;
-	text-align: center;
-	color: white;
+.desc{
+    color: magenta;
+
 }
-.title {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 0px 0px 0px 20px;
-    height: fit-content;
-	color: hotpink;
-	font-size: 20px;
-	text-align: center;
+.year{
+    color: hotpink;
+    width: 100%;
+    border-bottom: magenta 1px solid;
 }
-delim:before{
-	content: "~~~";
-	color: rgba(119, 88, 168, 1);
-	margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    margin:0 10px;
+rust::after{
+    content: "Rust";
+    font-weight:bold;
 }
-.right {
-	text-align: center;
-	width: 100%;
+rust::before{
+    content: "🦀";
+    font-weight:bold;
 }
-a {
-	text-decoration: none;
+rust{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: Sienna;
 }
-@media only screen and (max-width: 400px) {
-	.tile,
-	a {
-		width: 100%;
-        font-size: 13px;
-	}
+C::after{
+    content: "C";
+    font-weight:bold;
+}
+C::before{
+    content: "⬡";
+    font-weight:bold;
+}
+C{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: #abbbce;
+}
+cpp::after{
+    content: "c++";
+    font-weight:bold;
+}
+cpp::before{
+    content: "⬡";
+    font-weight:bold;
+}
+cpp{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: royalblue;
+}
+sfml::after{
+    content: "SFML";
+    font-weight:bold;
+}
+sfml::before{
+    content: "⬡";
+    font-weight:bold;
+}
+sfml{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: #90d13e;
+}
+sdl::after{
+    content: "SDL";
+    font-weight:bold;
+}
+sdl::before{
+    content: "⬡";
+    font-weight:bold;
+}
+sdl{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: aquamarine;
+}
+lua::after{
+    content: "Lua";
+    font-weight:bold;
+}
+lua::before{
+    content: "⬡";
+    font-weight:bold;
+}
+lua{
+    padding: 5px;
+    border-radius:10px;
+    color: black;
+    background-color: blue;
+}
+@keyframes size-up {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 800px) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
 }
