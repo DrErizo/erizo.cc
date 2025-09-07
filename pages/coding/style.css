@@ -2,16 +2,16 @@
 	font-family: 'CozetteVector';
 	src: url('https://erizo.cc/res/CozetteVector.otf');
 }
-html{
-    display: flex;
-    justify-content: center;
+html {
+	display: flex;
+	justify-content: center;
 }
 html {
 	height: 100%;
-    width: 100%;
+	width: 100%;
 }
 body {
-    width: 90%;
+	width: 90%;
 	height: 100%;
 	align-items: center;
 	flex-direction: column;
@@ -19,179 +19,186 @@ body {
 	display: flex;
 	font-family: CozetteVector;
 }
-.project-container > a{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+.project-container > a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
-.project-container:hover{
-    transform: scale(1.1);
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+.project-container:hover {
+	transform: scale(1.1);
+	box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
 }
-#projects{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+#projects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 
-    column-gap: 30px;
-    row-gap: 15px;
-    padding: 20px;
-    height: auto;
-    width: 100%;
+	column-gap: 35px;
+	row-gap: 15px;
+	padding: 20px;
+	height: auto;
+	width: 100%;
 }
 .project-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.01) 100%
-  );
-  pointer-events: none;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	background: linear-gradient(120deg,rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0.15) 100%);
+	pointer-events: none;
 }
-.project-container{
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 1em;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.project-container:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 100%);
+	pointer-events: none;
 }
-#left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 100%;
+.project-container {
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 1em;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
-#right{
-    width: 80%;
-    height: 100%;
+#left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	height: 100%;
 }
-#icon{
-    width: 100%;
-    height: 100%;
-    border: solid 1px black;
-    border-radius: 15px;
-    background-color: #232323;
-    padding: 5px;
-    margin: 1vw;
+#right {
+	width: 80%;
+	height: 100%;
 }
-.title{
-    color: pink;
+#icon {
+	width: 100%;
+	height: 100%;
+	border: solid 1px black;
+	border-radius: 15px;
+	background-color: #232323;
+	padding: 5px;
+	margin: 1vw;
+	color: white;
 }
-.desc{
-    color: magenta;
-
+.title {
+	color: pink;
 }
-.year{
-    color: hotpink;
-    width: 100%;
-    border-bottom: magenta 1px solid;
+.desc {
+	color: magenta;
 }
-rust::after{
-    content: "Rust";
-    font-weight:bold;
+.year {
+	color: hotpink;
+	width: 100%;
+	border-bottom: magenta 1px solid;
 }
-rust::before{
-    content: "🦀";
-    font-weight:bold;
+rust::after {
+	content: 'Rust';
+	font-weight: bold;
 }
-rust{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: Sienna;
+rust::before {
+	content: '🦀';
+	font-weight: bold;
 }
-C::after{
-    content: "C";
-    font-weight:bold;
+rust {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: Sienna;
 }
-C::before{
-    content: "⬡";
-    font-weight:bold;
+C::after {
+	content: 'C';
+	font-weight: bold;
 }
-C{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: #abbbce;
+C::before {
+	content: '⬡';
+	font-weight: bold;
 }
-cpp::after{
-    content: "c++";
-    font-weight:bold;
+C {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: #abbbce;
 }
-cpp::before{
-    content: "⬡";
-    font-weight:bold;
+cpp::after {
+	content: 'c++';
+	font-weight: bold;
 }
-cpp{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: royalblue;
+cpp::before {
+	content: '⬡';
+	font-weight: bold;
 }
-sfml::after{
-    content: "SFML";
-    font-weight:bold;
+cpp {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: royalblue;
 }
-sfml::before{
-    content: "⬡";
-    font-weight:bold;
+sfml::after {
+	content: 'SFML';
+	font-weight: bold;
 }
-sfml{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: #90d13e;
+sfml::before {
+	content: '⬡';
+	font-weight: bold;
 }
-sdl::after{
-    content: "SDL";
-    font-weight:bold;
+sfml {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: #90d13e;
 }
-sdl::before{
-    content: "⬡";
-    font-weight:bold;
+sdl::after {
+	content: 'SDL';
+	font-weight: bold;
 }
-sdl{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: aquamarine;
+sdl::before {
+	content: '⬡';
+	font-weight: bold;
 }
-lua::after{
-    content: "Lua";
-    font-weight:bold;
+sdl {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: aquamarine;
 }
-lua::before{
-    content: "⬡";
-    font-weight:bold;
+lua::after {
+	content: 'Lua';
+	font-weight: bold;
 }
-lua{
-    padding: 5px;
-    border-radius:10px;
-    color: black;
-    background-color: blue;
+lua::before {
+	content: '⬡';
+	font-weight: bold;
+}
+lua {
+	padding: 5px;
+	border-radius: 10px;
+	color: black;
+	background-color: blue;
 }
 @keyframes size-up {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
 }
 @media (max-width: 800px) {
-    #projects {
-        grid-template-columns: 1fr;
-    }
+	#projects {
+		grid-template-columns: 1fr;
+	}
 }
