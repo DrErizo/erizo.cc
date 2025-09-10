@@ -30,6 +30,14 @@ html {
 	gap: 10px;
 	font-family: CozetteVector;
 }
+#backlinks {
+	color: hotpink;
+	margin: 10px;
+	border: 2px solid grey;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
 a {
 	text-decoration: none;
 }
@@ -53,6 +61,7 @@ b {
 }
 #Niko {
 	width: 100%;
+	margin-top: 50px;
 }
 #oneshot {
 	position: relative;
@@ -71,27 +80,44 @@ b {
 #greeter {
 	color: hotpink;
 	font-size: 60px;
-	text-shadow: 3px 3px 0px pink, 15px 15px 5px rgba(0, 0, 0, 0.7);
+	text-shadow: 3px 3px 0px rgb(145, 32, 75), 15px 15px 5px rgba(0, 0, 0, 0.7);
 	-webkit-text-stroke: 1px pink;
+	margin: 40px 0px 0px 0px;
 }
 .textbox {
 	color: pink;
 	font-weight: unset;
-	font-size: 20px;
+	font-size: 18px;
 	border: 1px solid magenta;
 	width: 70%;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: rgba(23, 23, 23, 0.7);
+	line-height: 35px;
 }
+.long {
+	margin: 10px 0px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
 #socials {
 	display: flex;
 	width: 73%;
 	gap: 10px;
 }
-
+#socials > .textbox {
+	justify-content: center;
+	align-items: center;
+}
 .textbox > img {
 	width: 20px;
+	margin-right: 5px;
+}
+.long > img {
+	height: 20px;
+	margin-right: 5px;
 }
 #face {
 	width: 100%;
@@ -135,9 +161,8 @@ b {
 		display: none !important;
 	}
 	#socials {
-		width: 100%;
+		width: 99%;
 		flex-grow: 1;
-		margin-bottom: 20px;
 	}
 	html,
 	body {
