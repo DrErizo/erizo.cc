@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'CozetteVector';
-	src: url("../../res/CozetteVector.otf");
+	font-family: 'Comicoro';
+	src: url('../../res/Comicoro.ttf');
 }
 @keyframes move {
 	0% {
@@ -26,17 +26,16 @@ html {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	margin: 20px;
 	gap: 10px;
-	font-family: CozetteVector;
+	font-family: Comicoro;
 }
 #backlinks {
 	color: hotpink;
 	margin: 10px;
-	border: 2px solid grey;
-	padding: 5px;
+	padding: 3px;
 	border-radius: 10px;
-	background-color: rgba(255, 255, 255, 0.1);
 }
 a {
 	text-decoration: none;
@@ -44,7 +43,7 @@ a {
 b {
 	font-weight: 900;
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 0.95em;
+	font-size: 0.8em;
 	text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.7);
 }
 #left {
@@ -79,7 +78,7 @@ b {
 }
 #greeter {
 	color: hotpink;
-	font-size: 60px;
+	font-size: 90px;
 	text-shadow: 3px 3px 0px rgb(145, 32, 75), 15px 15px 5px rgba(0, 0, 0, 0.7);
 	-webkit-text-stroke: 1px pink;
 	margin: 40px 0px 0px 0px;
@@ -87,13 +86,14 @@ b {
 .textbox {
 	color: pink;
 	font-weight: unset;
-	font-size: 18px;
+	font-size: 1.8vw;
 	border: 1px solid magenta;
 	width: 70%;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: rgba(23, 23, 23, 0.7);
 	line-height: 35px;
+	box-sizing: border-box;
 }
 .long {
 	margin: 10px 0px;
@@ -102,12 +102,13 @@ b {
 	display: flex;
 }
 
-#socials {
+#me-stuff {
 	display: flex;
-	width: 73%;
 	gap: 10px;
+	width: 70%;
 }
-#socials > .textbox {
+#me-stuff > .textbox {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -127,7 +128,7 @@ b {
 	border-radius: 15px;
 	object-fit: cover;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
 	#face {
 		height: 150px;
 		object-fit: cover;
@@ -136,6 +137,7 @@ b {
 	}
 	#Niko {
 		width: 50%;
+		margin: 0;
 	}
 	.badge {
 		width: 30%;
@@ -147,7 +149,8 @@ b {
 		width: 100%;
 	}
 	.textbox {
-		width: 95%;
+		width: 100%;
+		font-size: 6vw;
 	}
 	#right {
 		margin: 0;
@@ -160,8 +163,8 @@ b {
 	.greeter-desktop {
 		display: none !important;
 	}
-	#socials {
-		width: 99%;
+	#me-stuff {
+		width: 100%;
 		flex-grow: 1;
 	}
 	html,
@@ -171,6 +174,7 @@ b {
 		overflow: scroll;
 		margin: 0;
 		width: 100%;
+		height: 100%;
 		align-items: center;
 	}
 }

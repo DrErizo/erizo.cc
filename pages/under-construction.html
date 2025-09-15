@@ -15,28 +15,32 @@
 		body {
 			font-family: 'Sono', sans-serif;
 			text-align: center;
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			flex-direction:column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
 		img {
 			width: 40%;
 		}
 		h1 {
-			color: violet;
-			-webkit-text-stroke: 1.5px black;
+			color: black;
+			-webkit-text-stroke: 1px white;
 		}
 		body {
 		}
 	</style>
 	<body>
-		<img style="width:200px" src="../res/lain-dancing.gif" />
+		<img style="width: 200px" src="../res/lain-dancing.gif" />
 		<img src="../res/under_construction.gif" />
 		<br />
 		<br />
-		<audio src="../res/The-Stanley-Parable-OST-Elevator.mp3" autoplay></audio>
-		<h1>Coming soon!!!<br> (I promise it won't take 14 months this time)</h1>
+		<audio
+			id="constrAudio"
+			src="../res/The-Stanley-Parable-OST-Elevator.mp3"
+			autoplay
+		></audio>
+		<h1>Coming soon!!!<br /></h1>
 		<script>
 			document.getElementsByTagName('audio')[0].volume = 0.5
 		</script>

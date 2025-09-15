@@ -12,44 +12,44 @@
 	background-clip: content-box;
 }
 /* Placed this here in hope of defeating the mighty corner, yet he still stands...:(( */
-::-webkit-scrollbar-corner{
-	display:none;
+::-webkit-scrollbar-corner {
+	display: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #fe00ff;
+	background-color: #fe00ff;
 }
 @font-face {
-	font-family: "CozetteVector";
-	src: url("../../res/CozetteVector.otf");
+	font-family: 'Comicoro';
+	src: url('../../res/Comicoro.ttf');
 }
 
-a{
+a {
 	text-decoration: none;
 }
-html{
-	height:100%;
+html {
+	height: 100%;
 }
-body{
-	height:100%;
+body {
+	height: 100%;
 	flex-direction: column;
-	margin:0;		
+	margin: 0;
 	display: flex;
-	font-family:CozetteVector;
+	font-family: Comicoro;
 }
-.idea{
-	border: 1px solid black;
+.idea {
+	border: 1px rgb(94, 11, 94) solid;
 	margin: 5px;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.6);
 	color: pink;
-	border-radius:15px;
-	font-size:20px;
-	padding-left:10px;
-	padding:5px;
+	border-radius: 15px;
+	font-size: 2vw;
+	padding-left: 10px;
+	padding: 5px;
 }
-a{
+a {
 	color: magenta;
 }
-span{
+span {
 	color: grey;
 }

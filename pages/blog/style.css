@@ -1,47 +1,46 @@
 @font-face {
-	font-family: "CozetteVector";
-	src: url("../../res/CozetteVector.otf");
+	font-family: 'Comicoro';
+	src: url('../../res/Comicoro.ttf');
 }
-html{
+html {
 	height: 80%;
 }
-body{
-	display:flex;
-	gap:10px;
+body {
+	display: flex;
+	gap: 10px;
 	flex-direction: column;
-	padding:10px;
+	padding: 10px;
 	height: 100%;
 }
-.entry{
-	display:flex;
-	align-items:center;
-	font-size:15px;
-	margin-top:5px;
-	margin-bottom:5px;
-	font-family:CozetteVector;
+.entry {
+	display: flex;
+	align-items: center;
+	font-size: 3vh;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: Comicoro;
 }
-#entries{
-	border: 2px solid #202020;
-	border-radius:20px;
-	background-color:rgba(13,13,13,0.7);
+#entries {
+	border: 1px rgb(95, 75, 95) solid;
+	border-radius: 20px;
+	background-color: rgba(13, 13, 13, 0.7);
 }
-.title{
-	color:pink;
+.title {
+	color: pink;
 	margin: 0;
 }
-.date{
+.date {
 	margin: 0;
-	color:hotpink;
-
+	color: hotpink;
 }
-.icon{
-	width:16px;
+.icon {
+	width: 16px;
 	height: 16px;
 	margin: 5px;
 	border-radius: 10px;
 	padding: 10px;
 }
-#writing-category{
+#writing-category {
 	width: 100%;
 	justify-content: center;
 	align-content: stretch;
@@ -50,18 +49,22 @@ body{
 	display: flex;
 	align-items: stretch;
 }
-#writing-category > *{
-	width:50%;
+#writing-category > * {
+	width: 50%;
 	padding: 20px;
 	margin: 5px;
+	border: 1px rgb(95, 75, 95) solid;
 	justify-content: center;
-	border: 2px solid #202020;
-	border-radius:20px;
-	background-color:rgba(13,13,13,0.7);
+	border-radius: 20px;
+	background-color: rgba(13, 13, 13, 0.7);
 }
-#writing-category > *:hover{
-	cursor:pointer;
+#writing-category > *:hover {
+	cursor: pointer;
 }
-.invisible{
+.invisible {
 	display: none;
+}
+hr {
+	width: 90%;
+	color: #202020;
 }

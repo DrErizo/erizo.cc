@@ -1,27 +1,27 @@
 @font-face {
-	font-family: "CozetteVector";
-	src: url("https://erizo.cc/res/CozetteVector.otf");
+	font-family: 'Comicoro';
+	src: url('https://erizo.cc/res/Comicoro.ttf');
 }
-body{
-	font-family: CozetteVector;
+body {
+	font-family: Comicoro;
 	display: flex;
 	justify-content: center;
-	align-items:center;
-	height:100%;
+	align-items: center;
+	height: 100%;
 }
-three{
+three {
 	display: flex;
-	width:100px;
+	width: 100px;
 	height: 100px;
-	font-size:20px;
-	border-radius:15px;
-	border: 1px black solid;
-	color:pink;
-	background-color: rgba(0,0,0,0.5);
+	font-size: 20px;
+	border-radius: 15px;
+	border: 1px rgb(95, 75, 95) solid;
+	color: pink;
+	background-color: rgba(0, 0, 0, 0.5);
 	justify-content: center;
-	align-items:center;
-	text-align:center;
+	align-items: center;
+	text-align: center;
 }
-marquee{
-	height:100%;
+marquee {
+	height: 100%;
 }
