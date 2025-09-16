@@ -25,6 +25,7 @@ three {
 }
 marquee {
 	height: 100%;
+	width: 100%;
 }
 #doodles {
 	position: absolute;
