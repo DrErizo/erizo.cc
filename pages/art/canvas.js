@@ -14,10 +14,8 @@ ctx.lineWidth = 3
 function resize() {
 	WIDTH = window.innerWidth
 	HEIGHT = window.innerHeight
-	canvas.width = WIDTH * window.devicePixelRatio
-	canvas.height = HEIGHT * window.devicePixelRatio
-	canvas.style.width = WIDTH + 'px'
-	canvas.style.height = HEIGHT + 'px'
+	canvas.width = WIDTH
+	canvas.height = HEIGHT
 }
 
 function draw() {
@@ -44,7 +42,6 @@ function draw() {
 		angle = Math.random() * Math.PI * 2
 	}
 	let hue = (Date.now() / 30) % 360
-	console.log(hue)
 	ctx.strokeStyle = `hsl(${hue},100%,60%`
 	ctx.beginPath()
 	ctx.moveTo(prevX, prevY)
