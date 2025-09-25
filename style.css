@@ -12,6 +12,7 @@ body {
 	display: flex;
 	height: 100%;
 	background-image: url(res/stars.gif);
+	animation: scroll 15s linear infinite;
 	font-family: Comicoro;
 	margin: 0;
 }
@@ -56,13 +57,12 @@ a {
 	backdrop-filter: saturate(180%) blur(20px);
 	border-color: var(--color);
 	flex-grow: 1;
+	transition: border-width 0.2s linear;
 }
 #categories > *:hover {
 	width: 0.9;
-	border: 3px solid;
-	border-left: 10px solid;
-	border-right: 10px solid;
 	animation: size-down 1s ease-in-out infinite;
+	border-width: 8px;
 	color: var(--color);
 	font-weight: 900;
 	margin: 10px;
@@ -175,5 +175,13 @@ main {
 	}
 	100% {
 		transform: scale(1) rotate(-3deg);
+	}
+}
+@keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -304px 234px;
 	}
 }
