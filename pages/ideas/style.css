@@ -36,6 +36,12 @@ body {
 	margin: 0;
 	display: flex;
 	font-family: Comicoro;
+	counter-reset: idea-counter -1;
+}
+.idea::before{
+	counter-increment: idea-counter;
+	content: counter(idea-counter) ". ";
+	color: grey;
 }
 .idea {
 	border: 1px rgb(94, 11, 94) solid;
@@ -49,7 +55,4 @@ body {
 }
 a {
 	color: magenta;
-}
-span {
-	color: grey;
 }

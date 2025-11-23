@@ -49,15 +49,4 @@
 		<div class="idea">Map of music concerts</div>
 		<span>_</span>
 	</body>
-
-	<script>
-		const ideas = document.getElementsByClassName('idea')
-		let idea_idx = 0
-
-		for(const idea of ideas) {
-			const span = document.createElement('span')
-			span.innerText = `${idea_idx++}. `
-			idea.prepend(span)
-		}
-	</script>
 </html>
