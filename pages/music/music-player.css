@@ -1,41 +1,45 @@
-#controls {
-	display: flex;
-	width: fit-content;
-	height: 50px;
+audio {
+	margin: 0 10px;
+	&::-webkit-media-controls-enclosure {
+		display: flex;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0);
+		border-radius: 0%;
+		height: fit-content;
+	}
+
+	&::-webkit-media-controls-panel {
+		padding: 0.5rem;
+		height: fit-content;
+	}
+
+	&::-webkit-media-controls-play-button,
+	&::-webkit-media-controls-mute-button {
+		border-radius: 0.5rem;
+		margin-inline-end: 0.5rem;
+	}
+
+	&::-webkit-media-controls-play-button {
+		background-color:#e0b3ff ;
+	}
+
+	&::-webkit-media-controls-mute-button {
+		display: none;
+	}
+
+	&::-webkit-media-controls-play-options {
+		background-color: oklch(0.79 0.11 88.35);
+	}
+
+	&::-webkit-media-controls-timeline {
+		background-color: #9f7aea;
+		border-radius: 0.5rem;
+		margin-inline-start: 1rem;
+	}
+
+	&::-webkit-media-controls-current-time-display,
+	&::-webkit-media-controls-time-remaining-display {
+		color: #e0b3ff;
+	}
 }
-#controls > img {
-	-webkit-filter: invert(100%);
-}
-#player {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	height: 150px;
-	bottom: 0;
-	width: 95%;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.7);
-}
-.player-container {
-	width: 100%;
-	background: #1e1e1e;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-	text-align: center;
-}
-#waveform {
-	width: 80%;
-	height: 100px;
-	border-radius: 5px;
-	margin-bottom: 10px;
-}
-button {
-	padding: 10px 20px;
-	border: none;
-	background: #ff5722;
-	color: white;
-	font-size: 16px;
-	cursor: pointer;
-	border-radius: 5px;
-}
+

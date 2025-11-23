@@ -14,30 +14,297 @@
 		<title>Erizo.cc</title>
 	</head>
 	<body>
-		<iframe
-			id="innerIFrame"
-			src="../under-construction.html"
-			width="100%"
-			height="100%"
-			frameborder="0"
-		></iframe>
-		<div id="player">
-			<div id="controls">
-				<img width="40px" src="../../res/prev-song.png" />
-				<div id="player-play-container">
-					<svg style="fill: #fff; width: 50px" viewBox="0 0 36 36">
-						<path
-							id="player-play"
-							d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"
-						></path>
-					</svg>
+		<input type="radio" name="albums" id="album-radio1">
+		<input type="radio" name="albums" id="album-radio2">
+		<input type="radio" name="albums" id="album-radio3">
+		<input type="radio" name="albums" id="album-radio4">
+		<input type="radio" name="albums" id="album-radio5">
+		<input type="radio" name="albums" id="album-radio6">
+		
+		<section id="info-container">
+        	<p id="nothing-selected">Select an album to view details --></p>
+			<div id="album-info">
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-1">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track1/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track1/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track1/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track1/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
 				</div>
-				<img width="40px" src="../../res/next-song.png" />
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-2">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track2/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track2/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track2/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track2/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
+				</div>
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-3">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track3/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track3/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track3/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track3/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
+				</div>
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-4">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track4/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track4/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track4/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track4/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
+				</div>
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-5">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track5/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track5/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track5/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track5/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
+				</div>
+				<!-- SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE -->
+				<div class="album-content" id="album-6">
+					<div class="album-head">
+						<div class="spinning-cd">
+							<div class="cd-reflection"></div>
+						</div>
+						<div class="info-text">
+							<p class="title">Sun dials</p>
+							<p class="artist">Erizo</p>
+							<p class="year">202? • ????</p>
+							<p class="description">The feelings that come and go everyday</p>
+						</div>
+					</div>
+					<div class="tracks">
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track6/300/300" alt="track1">
+							<track-title class="track-title">1. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track6/300/300" alt="track1">
+							<track-title class="track-title">2. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track6/300/300" alt="track1">
+							<track-title class="track-title">3. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="track">
+							<img class="track-image" src="https://picsum.photos/seed/track6/300/300" alt="track1">
+							<track-title class="track-title">4. test</track-title>
+							<audio id="track-audio" controls>
+								<source src="../../res/Dark Convergence.ogg" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					<div class="track-info">4 tracks • 2:48</div>
+				</div>
 			</div>
-			<div id="waveform"></div>
+		</section>
+		<div id="container">
+			<div class="albums">
+				<label for="album-radio1"></label>
+				<label for="album-radio2"></label>
+				<label for="album-radio3"></label>
+				<label for="album-radio4"></label>
+				<label for="album-radio5"></label>
+				<label for="album-radio6"></label>
+			</div>
 		</div>
-		<script></script>
-
-		<script src="music.js"></script>
 	</body>
 </html>

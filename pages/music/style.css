@@ -1,4 +1,263 @@
-html,
+html{
+	height: 100%;
+}
 body {
 	height: 100%;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	font-family: monospace;
+}
+#container{
+	display: grid;
+	flex: 1;
+	place-content: center;
+	overflow: hidden;
+}
+#info-container{
+	width: 50%;
+	min-width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.album-head{
+	display: flex;
+	flex-direction: row;
+}
+.album-content{
+	display: flex;
+	flex-direction: column;
+}
+#album-info{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+#info-container > #album-info > *{
+	display: none;
+	background-color: #000;
+	width: 80%;
+	padding: 30px;
+	border-radius: 10px;
+	border: 1px solid rgb(71, 68, 68);
+	opacity: 1;
+    box-shadow: 0 10px 40px rgba(130, 94, 190, 0.3), 0 0 0 2px rgba(183, 148, 244, 0.2);
+}
+#info-container > p{
+	display: flex;
+}
+.title {
+    margin: 0 0 8px 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #e0b3ff;
+    text-shadow: 0 2px 10px rgba(183, 148, 244, 0.5);
+}
+
+.artist {
+    color: #d4b3f0;
+    margin: 0 0 5px 0;
+    font-size: 20px;
+}
+
+.year {
+    color: #9f7aea;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description {
+    line-height: 1.8;
+    color: #c9b3e0;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+}
+.albums {
+    display: grid;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes rotate {
+  0% {transform: perspective(500px) rotateX(-90deg) rotate(0deg)}
+  to {transform: perspective(500px) rotateX(-90deg) rotate(-360deg)}
+}
+.albums > label{
+	grid-area: 1/1;
+	aspect-ratio: 1;
+	object-fit:contain;
+	transform: rotate(var(--angle)) translateY(120%) rotateY(180deg) rotateX(-90deg);
+}
+.albums > label{
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 0.3s ease;
+	display: block;
+}
+.albums > label:hover {
+	box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+}
+
+.albums > label:nth-child(1) {background-image: url("https://picsum.photos/seed/album1/300/300");--angle: 0deg}
+.albums > label:nth-child(2) {background-image: url("https://picsum.photos/seed/album2/300/300");--angle: 60deg}
+.albums > label:nth-child(3) {background-image: url("https://picsum.photos/seed/album3/300/300");--angle: 120deg}
+.albums > label:nth-child(4) {background-image: url("https://picsum.photos/seed/album4/300/300");--angle: 180deg}
+.albums > label:nth-child(5) {background-image: url("https://picsum.photos/seed/album5/300/300");--angle: 240deg}
+.albums > label:nth-child(6) {background-image: url("https://picsum.photos/seed/album6/300/300");--angle: 300deg}
+
+#album-1 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album1/300/300")}
+#album-2 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album2/300/300")}
+#album-3 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album3/300/300")}
+#album-4 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album4/300/300")}
+#album-5 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album5/300/300")}
+#album-6 > .album-head > .spinning-cd {background-image: url("https://picsum.photos/seed/album6/300/300")}
+
+input[type="radio"]{
+    display:none;
+}
+#nothing-selected{
+	color:#888;
+	font-size: 20px;
+}
+#album-radio1:checked ~ #info-container #album-1,
+#album-radio2:checked ~ #info-container #album-2,
+#album-radio3:checked ~ #info-container #album-3,
+#album-radio4:checked ~ #info-container #album-4,
+#album-radio5:checked ~ #info-container #album-5,
+#album-radio6:checked ~ #info-container #album-6 { display: flex}
+                                                 
+#album-radio1:checked ~ #info-container #nothing-selected,
+#album-radio2:checked ~ #info-container #nothing-selected,
+#album-radio3:checked ~ #info-container #nothing-selected,
+#album-radio4:checked ~ #info-container #nothing-selected,
+#album-radio5:checked ~ #info-container #nothing-selected,
+#album-radio6:checked ~ #info-container #nothing-selected { display: none}
+
+.jukebox{
+	position: absolute;
+}
+.spinning-cd {
+	transform: rotate(90deg) translateY(120%) rotateY(180deg) rotateX(-90deg);
+	flex-shrink: 0;
+    width: 120px;
+	margin-right: 30px;
+    height: 120px;
+    border-radius: 50%;
+	background-size: 120px 120px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.2), 0 5px 20px rgba(0, 0, 0, 0.5);
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spinning-cd::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #0a0a0a 0%, #0a0a0a 30%, #333 30%);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.cd-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	z-index: -9999;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(360deg,transparent 30%, rgba(255,255,255,1 ) 50%, transparent 60%);
+	animation: reflect 3s linear infinite;
+}
+.track-image{
+	width: 3vw;
+	border-radius: 10px;
+	border: 1px solid rgb(53, 51, 51);
+	margin: 0 10px 0 0 ;
+}
+.tracks{
+	width: min-content;
+
+}
+.track-title{
+	width: fit-content;
+	color:#9f7aea;
+}
+.track{
+	display: flex;
+	white-space: nowrap;
+	width: auto;
+	align-items: center;
+	padding: 10px;
+}
+.track-info {
+    color: #b794f4;
+    font-size: 13px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(183, 148, 244, 0.2);
+}
+
+
+@keyframes reflect {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+	body {
+		flex-direction: column;
+	}
+
+	#info-container {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		padding: 30px 0px;
+		order: 2;
+	}
+
+	#container {
+		order: 1;
+		min-height: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	#info-container {
+		margin: 0;
+	}
+	.track-image{
+		width: 40px;
+	}
+	#album-info {
+		padding: 20px;
+		margin: 0;
+	}
+
+	#album-info .title{
+		font-size: 20px;
+	}
+
+	#album-info .artist {
+		font-size: 16px;
+	}
+	.albums > label{
+		width: 30vw;
+		height: 30vw;
+	}
 }
