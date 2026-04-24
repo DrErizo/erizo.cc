@@ -10,9 +10,11 @@ html {
 body {
 	background-color: rgb(34, 21, 36);
 	display: flex;
+	flex-direction: column;
 	height: 100%;
-	background-image: url(res/stars.gif);
-	animation: scroll 15s linear infinite;
+	background-image: url(res/landscape.jpeg) ;
+	background-position: center;
+	background-size: cover;
 	font-family: Comicoro;
 	margin: 0;
 }
@@ -26,13 +28,12 @@ a {
 }
 #left {
 	margin: 20px;
-	flex-direction: column;
+	flex-direction: row;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-left: 10px;
-	width: 20%;
-	height: 90%;
+	height: 10%;
 }
 .category-label {
 	text-shadow: 2px 2px 0px var(--color), 7px 7px 15px var(--color);
@@ -42,10 +43,9 @@ a {
 }
 #categories {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	width: 100%;
 	text-align: center;
-	height: 100%;
 }
 #categories > * {
 	background-image: url(res/cosmos.webp);
@@ -96,7 +96,6 @@ a {
 }
 main {
 	box-sizing: border-box;
-	width: 100%;
 	height: 98%;
 	margin: 10px 10px;
 	overflow: hidden;
@@ -110,6 +109,7 @@ main {
 		width: 95%;
 		margin: 0;
 		height: 20%;
+		flex-direction: column;
 	}
 	#categories {
 		display: grid;
@@ -144,7 +144,7 @@ main {
 
 		.category-label {
 			text-shadow: 3px 3px 0px color-mix(in srgb, var(--color) 50%, var(--tint) 50%);
-			font-size: 1.1rem;
+			font-size: .1.8rem;
 		}
 	}
 	#categories > *:hover {
@@ -175,13 +175,5 @@ main {
 	}
 	100% {
 		transform: scale(1) rotate(-3deg);
-	}
-}
-@keyframes scroll {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -304px 234px;
 	}
 }
